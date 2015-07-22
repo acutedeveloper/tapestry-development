@@ -1,0 +1,130 @@
+//------  LEMONADE GRID ------//
+
+// Helpers
+$full:          100%;
+$half:          100% / 2;
+
+// Breakpoints
+$small:         480px;
+$medium:        780px;
+$large:         1024px;
+$max-width:		1160px;
+
+// Example padding for grid
+$bit-padding:   10px;
+
+// Grid widths
+$start:         1;
+$end:           12;
+
+
+*,
+*:before,
+*:after  {
+  margin: 0;
+  padding: 0;
+  @include box-sizing(border-box);
+}
+
+// Set the width of the grid
+.frame {
+  margin: 0 auto;
+
+  // clearfix
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+// Attribute selector
+ [class*='bit-'] {
+  float: left;
+  padding: $bit-padding;
+
+  &:last-of-type {
+    float: right;
+  }
+}
+
+
+// Create grid widths
+@for $i from $start through $end {
+  .bit-#{$i} {
+    //width: $full / $i;
+    width: $full / $end * $i;
+  }
+}
+
+@media (max-width: $small) {
+  @for $i from $start through $end {
+    .bit-#{$i} {
+      width: $full
+    }
+  }
+}
+
+//------ CUSTOM COLUMNS ------//
+
+.bit-75 {width:75%}
+.bit-25 {width:25%}
+
+
+//------ SET RESPONSIVE PARAMETERS ------//
+
+@media (min-width: $small) and (max-width: $medium) {
+  .bit-4,
+  .bit-6,
+  .bit-8,
+  .bit-10 {
+    width: $half;
+  }
+  
+  .bit-1,
+  .bit-2,
+  .bit-3,
+  .bit-5,
+  .bit-7,
+  .bit-9,
+  .bit-11 {
+	width: $full;
+  }
+  
+  .hide-mobile{
+	  display: none;
+  }
+}
+
+@media (min-width: $medium) and (max-width: $large) {
+  .bit-2,
+  .bit-7 {
+    width: $full;
+  }
+
+  .bit-4,
+  .bit-8,
+  .bit-10 {
+	width: $half;
+  }
+  .hide-tablet{
+	  display: none;
+  }
+}
+
+.container {
+    max-width : 1160px;
+    margin : 0 auto;
+    background-color: $white;
+    padding: 10px;
+}
+
+//------ GRID DEVELOPMENT ------//
+
+.box {
+  background-color: $cyan;
+  color: $white;
+  font-size: 1.5em;
+  padding:10px;
+  margin-bottom: 10px;
+}

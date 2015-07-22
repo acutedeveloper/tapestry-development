@@ -1,0 +1,97 @@
+// Border Radius mixin
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+
+// keeps background from busting out of border 
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+}
+
+@mixin border-radius-top($radius){
+	-moz-border-radius-topleft: $radius;
+	-webkit-border-top-left-radius: $radius;
+	border-top-left-radius: $radius;
+	-moz-border-radius-topright: $radius;
+	-webkit-border-top-right-radius: $radius;
+	border-top-right-radius: $radius;
+}
+
+@mixin border-radius-bottom($radius){
+	-moz-border-radius-bottomleft: $radius;
+	-webkit-border-bottom-left-radius: $radius;
+	border-bottom-left-radius: $radius;
+	-moz-border-radius-bottomright: $radius;
+	-webkit-border-bottom-right-radius: $radius;
+	border-bottom-right-radius: $radius;
+}
+
+// Box Sizing Mixin
+@mixin box-sizing($box-sizing){
+  -moz-box-sizing: $box-sizing;
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}
+
+// Box Shadow Mixin
+@mixin box-shadow($box-sizing){
+  -moz-box-sizing: $box-sizing;
+  -webkit-box-sizing: $box-sizing;
+  box-sizing: $box-sizing;
+}
+
+
+// Clear after floats
+@mixin clearfix {
+  zoom:1;
+  &:before, &:after {
+    content: "\0020"; 
+    display: block; 
+    height: 0; 
+    overflow: hidden; 
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// Apply clearfix to this classes by default
+.clearfix, .group{
+  @include clearfix;
+}
+
+// Responsive mixins
+@mixin responsive($res)
+{
+  @media screen and (max-width: $res)
+  {
+    @content;
+  }
+}
+
+@mixin mobilefirst($res)
+{
+  @media screen and (min-width: $res)
+  {
+    @content;
+  }
+}
+
+@mixin headingfour{
+	border-top: 1px solid $silver;
+	padding-top: 5px;
+	margin-bottom: 15px;
+	font-size: 14px;
+	font-weight: normal;
+}
+
+//Hi-Dpi images
+@mixin hidpi($image, $height, $width){
+	@media all and (-webkit-min-device-pixel-ratio: 1.5) {
+	    background-image: url($image);
+	    background-size: $height $width;
+	}
+}

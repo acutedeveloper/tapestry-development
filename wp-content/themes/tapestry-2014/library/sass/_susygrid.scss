@@ -1,0 +1,127 @@
+/**
+ * Styles for AG grids & Container
+ */
+
+.container {
+  background-color: #fbeecb;
+  @include container(1140px);
+  @include clearfix;
+  padding-left: 15px; 
+  padding-right: 15px;
+  }
+
+.ag1, .ag3 {
+  background-color: #71dad2;
+}
+
+.ag2 {
+  background-color: #fae7b3;
+}
+
+.ag1 {
+  @include span(10);
+}
+
+.ag2 {
+  @include span(6 of 10);
+  @include clearfix; 
+}
+
+.ag3 {
+  @include span(2 of 10 last);
+}
+
+.ag4,.ag5,.ag8,.ag9 {
+  background-color: #ee9e9c;
+}
+
+.ag4,.ag5 {
+  @include span(3 of 6);
+}
+.ag5 {
+  @include last;
+}
+
+.ag6 {
+  background-color: #f09671;
+}
+
+.ag7 {
+  background-color: #f6d784;
+}
+
+.ag6 {
+  @include span(2 of 6);
+}
+
+.ag7 {
+  @include span(4 of 6 last);
+  @include clearfix;
+}
+
+.ag10 {
+  background-color: #ea9fc3;
+}
+
+.ag8 {
+  @include span(2 of 4);
+}
+
+.ag9 {
+  @include span(2 of 4 last);
+}
+
+.ag8, .ag9{
+	margin-bottom: gutter(1);
+}
+
+.ag10 {
+  clear: both;
+  // Alternatively, you can now use the span mixin with the full keyword to tell Susy this should be a 100% width 
+  // @include span(full);
+}
+/**
+ * Text Styles
+ */
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: normal;
+  padding-top: 1.8rem;
+  padding-bottom: 1.8rem;
+}
+
+.ag1 {
+  // tablet view 
+  @include breakpoint(600px) {
+    @include span(2 of 6 last);
+  }
+  // desktop view 
+  @include breakpoint(900px) {
+    @include span(2 of 10);
+  }
+}
+
+.ag2 {
+  @include clearfix;
+  // tablet view
+  @include breakpoint(600px) {
+    @include span(4 of 6);
+  }
+  // desktop view 
+  @include breakpoint(900px) {
+    @include span(6 of 10);
+  }
+}
+
+.ag3 {
+  // tablet view 
+  @include breakpoint(600px) {
+    @include span(2 of 6 last);
+  }
+
+  // desktop view 
+  @include breakpoint(900px) {
+    @include span(2 of 10 last);
+  }
+}

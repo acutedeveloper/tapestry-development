@@ -1,0 +1,39 @@
+// Consistent settings
+$br: 5px; // Border-radius
+$btn-br: 5px; // Button border-radius
+$padding: 40px; // Padding and margins
+
+// Brand Colors
+$blue: #005C97;
+$red: #DA322A;
+$yellow: #ED9D2D;
+$magenta: #D8127D;
+$cyan: #00A3DA;
+$purple: #582A69;
+$green: #009681;
+$pale-blue: #BFE4ED;
+$pink: #EBA6C0;
+$mint: #90CDBF;
+
+$grey: #42464B;
+$silver: #ECECED;
+$light-grey: #A0A2A5;
+
+// Interface Colors
+$text-color: $grey;
+
+
+// Gray Scale
+$white: #FFFFFF;
+$black:  #111;
+
+// Color variables
+$primary-color: $green;
+$secondary-color: $magenta;
+$tertiary-color: $yellow;
+
+$bad-color: $red; // Bad color for errors, validation etc.
+$good-color: $green; // Good color for success etc.
+$info-color: $blue; // Good color for success etc.
+$warning-color: $yellow; // Good color for success etc.
+$subtle-color: $grey; // Subtle color for subtle text

@@ -1,0 +1,141 @@
+//------ STYLE GUIDE ------//
+.heading-box {
+	background-color:$cyan;
+	color:$white;
+	font-size:3em;
+	padding:5px 20px;
+	text-align:left;
+}
+
+.heading-rule {
+	color:$grey;
+	border-bottom:3px solid $grey;
+}
+
+.heading-dash {
+	overflow:hidden;
+	text-align:left;
+}
+
+.heading-dash:after {
+	//background-color:$grey;
+	border-top:1px dashed $grey;
+	content:"";
+	display:inline-block;
+	height:1px;
+	position:relative;
+	vertical-align:middle;
+	width:100%;
+}
+
+.heading-dash:after {
+	left:.5em;
+	margin-right:-75%;
+}
+
+.font-size{
+	font-weight: bold;
+	font-size: 1.687em;
+	margin: 0;
+	line-height: 35px;
+}
+
+.small-swatch, .mini-swatch {
+	float:right;
+	background-color:$cyan;
+	color:$white;
+	padding:10px 0;
+	text-align:center;
+	width:30px;
+	height:30px;
+	margin: 0;
+	padding: 0;
+}
+
+.mini-swatch{
+	height: 15px;
+	width: 15px;
+}
+
+// Brand Colors
+//-----------------------
+
+.blue {
+	background-color: $blue;
+}
+
+.red {
+	background-color: $red;
+}
+.yellow {
+	background-color: $yellow;
+}
+.magenta {
+	background-color: $magenta;
+}
+.pale-blue {
+	background-color: $pale-blue;
+}
+.cyan {
+	background-color: $cyan;
+}
+.purple {
+	background-color: $purple;
+}
+.pink {
+	background-color: $pink;
+}
+.mint {
+	background-color: $mint;
+}
+
+.light-grey{
+	background-color: $light-grey;
+}
+
+.silver{
+	background-color: $silver;
+}
+
+// Interface Colors
+//-----------------------
+
+.red {
+	background-color: $red;
+}
+
+.green {
+	background-color: $green;	
+}
+
+.blue {
+	background-color: $blue;	
+}
+
+.yellow {
+	background-color: $yellow;
+}
+
+.grey {
+	background-color: $grey;
+}
+
+.grey-text {
+	background-color: $text-color;
+}
+
+a{
+	&.hover{
+		color: $cyan;
+	}
+	
+	&.active{
+		text-decoration: none;
+		color: $blue;
+	}
+	
+	&.visited{
+		color: $pale-blue;
+	}
+}
+

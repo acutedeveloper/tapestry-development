@@ -1,0 +1,191 @@
+//------ MAIN NAVIGATION ------//
+
+	nav#main-nav {
+		border-top: 1px solid $light-grey;
+	
+	.to-main-nav{
+		text-decoration: none;
+		padding: 0 7px 0 7px;
+		line-height: 40px;
+		font-weight: bold;
+		color: $grey;
+		float: left;
+		transition: background-color 0.5s ease;
+		&:hover, &.active{
+			background-color: $red;
+			color: $white;
+		}
+		@include border-radius($br);
+		
+		@include breakpoint(768px){
+			display: none;
+		}
+	}
+
+	ul{
+		display: none;
+		width: 100%;
+		color: $grey;
+		font-size: 22px;
+		margin: 0;
+		padding: 0;
+		position: relative;
+		list-style: none;
+		float: none;
+		font-family: Plume-Regular;
+		clear: left;
+
+		li {
+			height: auto;
+			border-top: 1px solid $light-grey;
+			@include breakpoint(768px){
+				margin: 0 2px;				
+			}
+			@include breakpoint(1024px){
+				margin: 0 5px;				
+			}
+			a {
+				display: block;
+				padding: 0 7px 0 7px;
+				@include breakpoint(1024px) {
+					padding: 0 10px 0 10px; 
+				}
+				color: #757575;
+				text-decoration: none;
+				line-height: 40px;
+				&:hover{
+					color: $white;
+					background-color: $red;
+				}
+			}
+			
+			&:first-child{
+				border-top: none;
+				margin: 0;
+			}
+						
+			&:last-child{
+				margin: 0;
+			}			
+
+			&.current-menu-parent > a{
+				color: $white;
+				background-color: $red;				
+			}
+		}
+		
+	
+		li:hover > ul {
+			display: block;
+		}
+		
+		
+		// Level 2	
+		ul{
+			padding: 0;
+			display: none;
+			font-size: 1em;
+			z-index: 1000;
+			background: rgba(66,70,75,0.90);
+			
+			li{
+				float: none; 
+				border-top: 1px solid #6b727c;
+				position: relative;
+				
+				transition: background-color 0.5s ease;
+				text-align: left;
+				border-top: 1px solid $light-grey;
+								
+				a{
+					padding: 0 10px 0 10px;
+					color: $white;
+
+					&:hover{
+						background-color: $red;
+						text-shadow: 1px 1px 0px rgba(0,0,0,0.50);
+					}
+				}
+			}
+		}
+	}
+}
+
+@include breakpoint(768px){ 
+	
+nav#main-nav{
+	text-align: center;
+
+	ul{
+		width: auto;
+		margin: 0 auto;
+		position: relative;
+		font-size: 18px;
+		@include breakpoint(1024px) {
+			font-size: 22px; 
+		}
+		display: inline-table;
+
+		&:after {
+			content: ""; clear: both; display: block;
+		}
+
+		li{
+			float: left;
+			border-top: none;
+			a{
+				padding: 0 7px 0 7px;
+				@include border-radius($br);
+				display: block;
+				@include breakpoint(1024px) {
+					padding: 0 10px 0 10px; 
+				}
+			}
+			
+		}
+		
+		li.mn-header-link{
+			display: none;
+		}		
+	
+		li:hover > ul {
+			display: block;
+		}
+		
+		// Level 2
+		ul{
+			@include border-radius($br);
+			position: absolute;
+			top: 100%;
+			padding: 0;
+			display: none;
+			width: auto;
+			
+			li{
+
+				float: none;
+				position: relative;
+				
+				a{
+					@include border-radius(0);
+				}
+				 
+				&:first-child{
+					border: none;
+					a{
+						@include border-radius-top($br);
+					}
+				}
+										
+				&:last-child a{
+						@include border-radius-bottom($btn-br);
+				}
+				
+			}			
+		}
+
+	}
+	
+}
+	
+}

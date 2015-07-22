@@ -1,0 +1,92 @@
+/* Need a mixin that creates all the various button sizes */
+
+//------ TEXT LINKS ------//
+a{
+	color:$cyan;
+	&:hover,&:focus{
+		color: $blue;
+	}
+/*
+	&:active{
+		color: $blue;
+		text-decoration: none;
+	}
+	&:visited{
+		color: $pale-blue;
+	}
+*/
+}
+
+//------ DEFAULT BUTTON ------//
+.btn{
+  @include border-radius($btn-br);
+  background:$tertiary-color;
+  border:none;
+  color:#fff;
+  text-decoration:none;
+  text-shadow:0 1px 2px rgba(0,0,0,.2);
+  display:inline-block;
+  line-height:1;
+  padding:12px 25px;
+  text-transform: capitalize;
+  // @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2),0 0 5px rgba(0,0,0,.05),0 1px 2px rgba(0,0,0,.2));
+  outline:none;
+  &:hover,&:focus{
+    background:darken($tertiary-color,5);
+    text-decoration: none;
+    // @include box-shadow(inset 0 1px 0 rgba(255,255,255,.2),0 0 10px rgba(0,0,0,.1),0 1px 2px rgba(0,0,0,.2));
+  }
+  &:active{
+    background:darken($tertiary-color,10);
+    // @include box-shadow(inset 0 1px 2px rgba(0,0,0,.2));
+  }
+}
+
+//------ PRIMARY ACTION BUTTON ------//
+.btn-primary{
+  @extend .btn;
+  background-color:$primary-color;
+  &:hover,&:focus{
+    background-color:darken($primary-color,5);
+  }
+  &:active{
+    background-color:darken($primary-color,10);
+  }
+}
+
+//------  SECONDARY ACTION BUTTON ------//
+.btn-secondary{
+  @extend .btn;
+  background-color:$secondary-color;
+  &:hover,&:focus{
+    background-color:darken($secondary-color,5);
+  }
+  &:active{
+    background-color:darken($secondary-color,10);
+  }
+}
+
+//------ CALL TO ACTION - SLIGHTLY BIGGER ------//
+.btn-cta{
+  font-size:1.6em;
+  padding:.8em 1.6em;
+}
+
+//------ LINK BUTTON - A BUTTON THAT LOOKS LIKE A LINK ------//
+.btn-link{
+  @extend .btn;
+  color:$primary-color;
+  background:transparent;
+  border:none;
+  text-shadow:none;
+  text-transform:none;
+  //@include box-shadow(none);
+  &:hover,&:focus{
+  	text-decoration:underline;
+    background:transparent;
+  	//@include box-shadow(none);
+  }
+  &:active{
+
+  }
+}

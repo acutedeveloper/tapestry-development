@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){$(".to-main-nav").click(function(e){e.preventDefault(),$(".main-nav").slideToggle()}),$(".inner-nav-link").click(function(e){e.preventDefault(),$("#leftcolumn ul").slideToggle()}),$(".bxslider").bxSlider({minSlides:1,maxSlides:1,slideWidth:0,auto:!0})});
