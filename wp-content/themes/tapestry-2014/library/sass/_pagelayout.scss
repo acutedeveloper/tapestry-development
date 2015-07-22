@@ -2,7 +2,7 @@
 
 header .container{
 	padding: 0;
-	
+
 	.logo{
 		@include span(12 of 12);
 		text-align: center;
@@ -12,16 +12,16 @@ header .container{
 			@include span(3 of 12);
 			text-align: left;
 		}
-		
+
 	}
 
 	.mini-tab{
 		@include span(12 of 12);
 		@include breakpoint(768px){
-			display: none;			
+			display: none;
 		}
 		position: relative;
-		
+
 		p{
 			padding: 0 10px 5px 10px;
 			margin: auto;
@@ -33,9 +33,9 @@ header .container{
 			background-color: $light-grey;
 			@include border-radius-bottom($br);
 			width: 240px;
-			
+
 		}
-		
+
 	}
 
 	.mini-navs {
@@ -45,9 +45,9 @@ header .container{
 		display: none;
 
 		@include breakpoint(768px){
-			display: block;			
+			display: block;
 		}
-		
+
 		p{
 			float: right;
 			padding: 0 10px 5px 10px;
@@ -60,7 +60,7 @@ header .container{
 			background-color: $light-grey;
 			@include border-radius-bottom($br);
 		}
-						
+
 		ul{
 			margin: 0;
 			padding: 0;
@@ -71,26 +71,26 @@ header .container{
 			@include border-radius-bottom($br);
 			position: relative;
 			display: inline-table;
-			
+
 			&:after{
 				content: ""; clear: both; display: block;
 			}
-			
+
 			&.purple-menu{
 				background-color: $purple;
 			}
-			
+
 			li{
 				float: left;
 				border: none;
 				margin: 0;
 				padding: 0;
 				color: $white;
-								
+
 				&:hover > ul {
 					display: block;
 				}
-				
+
 				a {
 					padding: 0 10px 5px 10px;
 					margin: 0;
@@ -99,14 +99,14 @@ header .container{
 					font-weight: bold;
 					text-decoration: none;
 					display: block;
-					
+
 					&:hover{
 						color: #FFF;
 						text-decoration: underline;
 					}
 				}
-			}		
-				
+			}
+
 			ul{
 				display: none;
 				background: rgba(66,70,75,0.90);
@@ -117,9 +117,9 @@ header .container{
 				z-index: 1000;
 				width: 190px;
 				@include border-radius($br);
-	
+
 				li {
-					float: none; 
+					float: none;
 					border-top: 1px solid $silver;
 					position: relative;
 					a {
@@ -135,7 +135,7 @@ header .container{
 							@include border-radius-top($br);
 						}
 					}
-											
+
 					&:last-child a{
 							@include border-radius-bottom($btn-br);
 					}
@@ -147,18 +147,18 @@ header .container{
 			}
 		}
 	}
-		
+
 	form{
 		@include span(12);
 		position: relative;
   	}
-	
+
 	@include breakpoint(768px){
 		form{
 			position: static;
 			@include span(9 last);
 		}
-		
+
 	}
 }
 
@@ -172,14 +172,26 @@ header .container{
   margin-bottom: 10px;
 }
 
+.tapbox-cqc{
+	position: relative;
+	margin-bottom: gutter();
+  overflow: hidden;
+	background-color: #FFFFFF;
+
+	.cqc-widget{
+		border: none !important;
+		background-image: none !important;
+	}
+}
+
 // Generic Style for box
 .tapbox{
 	padding: 10px;
 	position: relative;
 	margin-bottom: gutter();
-    overflow: hidden;
+  overflow: hidden;
 	background-color: $light-grey;
-	
+
 	h1{
 		font-family: Plume-Bold;
 		position: absolute;
@@ -188,9 +200,9 @@ header .container{
 		font-size: 30px;
 		line-height: normal;
 		padding: 0;
-		margin: 0;			
+		margin: 0;
 	    z-index: 10;
-	    color: $white;		
+	    color: $white;
 	}
 
 	h2{
@@ -200,7 +212,7 @@ header .container{
 		font-size: 24px;
 		line-height: normal;
 		padding: 0;
-		margin: 0;			
+		margin: 0;
 	    z-index: 10;
 	    color: $white;
 	    a{
@@ -211,7 +223,7 @@ header .container{
 		    }
 	    }
 	}
-	
+
 	a.label{
 		position: absolute;
 		z-index: 10;
@@ -255,7 +267,7 @@ header .container{
 
 	.carousel{
 		@include span(12);
-		height: 315px;		
+		height: 315px;
 		background-color: $green;
 		margin-bottom: gutter();
 		@include breakpoint(768px){
@@ -274,7 +286,7 @@ header .container{
 		@include breakpoint(768px){
 			@include span(4 of 12 last);
 		}
-		
+
 		.tapbox{
 			background-color: $red;
 			height: 180px;
@@ -284,25 +296,25 @@ header .container{
 				height: 214px;
 			}
 			margin-bottom: 6%;
-			
+
 			&:last-child{
 				@include last();
 			}
-			
-			
+
+
 		}
-	}	
-	
+	}
+
 }
 
 .services-6{
 
 	@include span(12);
 
-	.tapbox{
+	.tapbox, .tapbox-cqc{
 		@include span(12);
 		height: 255px;
-				
+
 		&:nth-child(2n){
 			@include last();
 		}
@@ -325,8 +337,8 @@ header .container{
 				@include last();
 			}
 		}
-	}	
-		
+	}
+
 }
 
 .services-4{
@@ -336,20 +348,20 @@ header .container{
 	.tapbox{
 		@include span(6 of 12);
 		height: 220px;
-		
-				
+
+
 		&:nth-child(2n){
 			@include last();
 		}
 
-		@include breakpoint(768px){		
+		@include breakpoint(768px){
 			height: 263px;
 			img{
 				width: 100%;
 			}
 		}
-	}	
-		
+	}
+
 }
 
 .services-5{
@@ -362,8 +374,8 @@ header .container{
 		height: 176px;
 		@include breakpoint(768px){
 			@include span(6 of 12);
-		}				
-	}	
+		}
+	}
 
 	.hero{
 		height: 376px;
@@ -381,14 +393,14 @@ header .container{
 		@include breakpoint(768px){
 			@include span(3 of 12);
 		}
-		
+
 		.tapbox{
 			@include span(6 of 12);
 			margin-bottom: gutter();
 			@include breakpoint(768px){
 				@include span(3 of 3);
 				margin-bottom: 8%;
-			}				
+			}
 			&:last-child{
 				@include last();
 			}
@@ -398,7 +410,7 @@ header .container{
 			@include last();
 		}
 	}
-		
+
 }
 
 //------ !BREADCRUMBS ------//
@@ -415,7 +427,7 @@ header .container{
 		float: left;
 		list-style-type: none;
 		width: 100%;
-	
+
 		li{
 			float: left;
 			color: $light-grey;
@@ -428,7 +440,7 @@ header .container{
 				}
 			}
 		}
-	}	
+	}
 }
 
 //------ !LEFT COLUMN ------//
@@ -450,11 +462,11 @@ header .container{
 	  box-sizing: border-box;
 	  font-size: 0.875em;
 	  margin-bottom: 10px;
-	  
+
 	  i{
 		  line-height: 25px;
-	  }	
-	
+	  }
+
 	  @include breakpoint(768px){
 		  display: none;
 	  }
@@ -472,7 +484,7 @@ header .container{
 		color: $grey;
 		font-size: 18px;
 		@include breakpoint(1024px) {
-			font-size: 22px; 
+			font-size: 22px;
 		}
 		margin: 0;
 		margin-bottom: 20px;
@@ -488,26 +500,26 @@ header .container{
 			@include span(3 of 4);
 			display: block;
 		}
-		
+
 		@include border-radius($br);
-		
+
 		li{
 			transition: background-color 0.5s ease;
 			text-align: left;
 			border-top: 1px solid $light-grey;
 			display: block;
-			
+
 			&:first-child{
 				border: none;
 				a{
 					@include border-radius-top($br);
 				}
 			}
-									
+
 			&:last-child a{
 					@include border-radius-bottom($btn-br);
 			}
-			
+
 			a{
 				padding: 10px 10px 5px 10px;
 				color: $grey;
@@ -521,40 +533,40 @@ header .container{
 					text-shadow: 1px 1px 0px rgba(0,0,0,0.50);
 				}
 			}
-			
+
 			&.current_page_item > a{
 				background-color: $red;
 				color: $white;
-				text-shadow: 1px 1px 0px rgba(0,0,0,0.50);				
+				text-shadow: 1px 1px 0px rgba(0,0,0,0.50);
 			}
 
-		}	
+		}
 	}
 
 	.authorinfo{
-		
+
 		@include span(4 of 4);
 		@include breakpoint(768px){
 			@include span(4 of 4);
 		}
-		
+
 		p{
 			margin-bottom: 10px;
 		}
-		
+
 		.author{
 			font-size: 16px;
 			margin-bottom: 0;
 		}
-		
+
 		hr{
 			border: 0;
 			height: 0;
 			border-top: 1px solid $light-grey;
 			margin-top: 15px;
-			margin-bottom: 5px;	
-		}	
-	}		
+			margin-bottom: 5px;
+		}
+	}
 }
 
 //------ !RIGHT COLUMN ------//
@@ -572,7 +584,7 @@ header .container{
 // The Susy is a lil complex here. Just remember to follow the context for each breakpoint
 .news-home{
 	background-color: $white;
-	
+
 	.column{
 		@include span(12);
 		@include breakpoint(1024px){
@@ -580,17 +592,17 @@ header .container{
 		}
 		@include clearfix;
 		margin-bottom: gutter();
-		
+
 		&:last-child{
 			@include last();
 		}
-		
+
 		h4{
 			@include headingfour();
 		}
-	
+
 		article{
-		
+
 			@include span(12);
 			@include breakpoint(768px){
 				@include span(6 of 12);
@@ -601,11 +613,11 @@ header .container{
 
 			@include clearfix;
 			margin-bottom: 5px;
-			
+
 			&:last-child{
 				@include last();
 			}
-			
+
 			h2{
 				@include span(6 of 12 last);
 				@include breakpoint(768px){
@@ -623,7 +635,7 @@ header .container{
 					}
 				}
 			}
-						
+
 			.newsbox{
 				padding: 10px;
 				position: relative;
@@ -635,12 +647,12 @@ header .container{
 				@include breakpoint(768px){
 					@include span(3 of 6);
 				}
-				
+
 				a.label{
 					position: absolute;
 					z-index: 10;
 				}
-						
+
 			    img{
 /*
 					position: absolute;
@@ -659,25 +671,25 @@ header .container{
 			    }
 
 			}
-			
+
 			&.no-image{
 				h2{
 					width: 100%;
 				}
-				
+
 				border-bottom: 1px solid $silver;
 				height: 168px;
 				margin-bottom: 10px;
-				
+
 				a.label{
 					position: relative;
 					margin: 10px 0;
 					float: left;
 				}
-			}	
+			}
 
 		}
-	
+
 	}
 }
 
@@ -688,7 +700,7 @@ header .container{
 	padding-bottom: gutter();
 	margin-bottom: 12px;
 	position: relative;
-	
+
 	h2{
 		font-size: 24px;
 		line-height: 28px;
@@ -696,12 +708,12 @@ header .container{
 			text-decoration: none;
 		}
 	}
-	
+
 	.date{
 		float: right;
 		font-weight: bold;
 		color: $light-grey;
-	}	
+	}
 }
 
 .related-articles{
@@ -715,7 +727,7 @@ header .container{
 	h4{
 		@include headingfour();
 	}
-	
+
 	article{
 
 		@include span(12);
@@ -747,7 +759,7 @@ header .container{
 		@include articlestyle();
 
 	}
-	
+
 }
 
 
@@ -777,7 +789,7 @@ header .container{
 			@include span(12);
 			height: 225px;
 			margin-bottom: gutter();
-			
+
 			img{
 				position: absolute;
 				left: 50%;
@@ -788,29 +800,29 @@ header .container{
 				-ms-transform: translate(-50%,-50%);
 				transform: translate(-50%,-50%);
 			}
-			
+
 		}
 
 	}
-		
+
 }
 
 .pagination{
-	
+
 	list-style:none;
 	font-size:12px;
 
 	@include span(8 of 12);
 
 	margin-bottom: 20px;
-	
+
 	ul{
 		padding: 0px;
 	}
-	
+
 	li{
 		display: inline;
-		
+
 		a{
 			display:block;
 			color: $white;
@@ -821,7 +833,7 @@ header .container{
 			@include border-radius(3px);
 			text-decoration: none;
 		}
-	
+
 		span.current { display:block; float:left; padding:4px 9px; margin-right:4px; border:1px solid #efefef; background-color: $blue; color: $white; @include border-radius(3px); }
 		span.dots { display:block; float:left; padding:4px 9px; margin-right:4px; }
 	}
@@ -837,16 +849,16 @@ header .container{
 	@include border-radius($br);
 	@include span(12);
 	margin-bottom: gutter();
-	
+
 	h1{
 		color: $grey;
 		font-size: 24px;
 		line-height: normal;
 		margin-bottom: 10px;
 	}
-	
+
 	.location-content{
-		@include span(12);		
+		@include span(12);
 		@include breakpoint(768px){
 			@include span(6 of 12);
 		}
@@ -854,7 +866,7 @@ header .container{
 			@include span(8 of 12 );
 		}
 	}
-	
+
 	.location-map{
 		background-color: $purple;
 		border: 1px solid $silver;
@@ -882,20 +894,20 @@ header .container{
 			&:last-child{
 				@include last();
 			}
-		}		
-		
+		}
+
 		h4{
 			border-bottom: 1px solid $grey;
 			padding-bottom: 5px;
 			margin-bottom: 15px;
 			font-size: 20px;
 			font-weight: normal;
-		
+
 			&.fb{
 				background: url("../img/logo-fb-footer.png") no-repeat right top;
 				@include hidpi("../img/logo-fb-footer@2x.png", 20px, 21px);
-			}		
-				
+			}
+
 			&.tw{
 				background: url("../img/logo-twit-footer.png") no-repeat right top;
 				@include hidpi("../img/logo-twit-footer@2x.png", 21px, 17px);
@@ -911,7 +923,7 @@ header .container{
 
 	.flickr {
 	  @include clearfix;
-	
+
 	  .flickr-thumbs {
 	    @include gallery(1 of 4);
 		@include breakpoint(768px){
@@ -919,7 +931,7 @@ header .container{
 		}
 		@include breakpoint(1024px)
 		{
-			@include gallery(1 of 4);			
+			@include gallery(1 of 4);
 		}
 	    margin-bottom: gutter();
 	  }
@@ -943,20 +955,20 @@ footer, .push {
 }
 
 footer{
-	
+
 	margin-top: 45px;
-	
+
 	p{
 		margin-bottom: 5px;
 		strong{
 			color: $blue;
 		}
 	}
-	
+
 	a{
 		color: $grey;
-	}	
-		
+	}
+
 	.logo-col {
 		display: none;
 		min-height: 125px;
@@ -1012,7 +1024,7 @@ footer{
 			width: span(3);
 		}
 // 		margin-bottom: 10px;
-		
+
 		ul{
 			margin: 0;
 			padding: 0;
@@ -1020,7 +1032,7 @@ footer{
 			font-size: 13px;
 		}
 	}
-	
+
 }
 
 .footer-nav{
@@ -1040,7 +1052,7 @@ footer{
 			color: $white;
 			margin: 0;
 			padding: 0;
-			
+
 			a{
 				padding: 5px 10px 5px 10px;
 				margin: 0;
@@ -1054,7 +1066,7 @@ footer{
 				}
 			}
 		}
-		
+
 	}
-	
+
 }
