@@ -57,7 +57,7 @@
 						$args = array(
 							'category_name' => 'tapestry-news',
 							'post__in' => get_option( 'sticky_posts' ),
-							'showposts' => '6'
+							'showposts' => '4'
 						);
 					
 						$the_query = new WP_Query( $args );
@@ -72,7 +72,6 @@
 
 						<?php if (has_post_thumbnail()) { ?>
 						<article>
-							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 							<div class="newsbox">
 							
 								<?php category_label(get_the_ID()); ?>
@@ -80,6 +79,8 @@
 	                            <?php the_post_thumbnail('news-home'); ?>
 	                            
 							</div>					
+							<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+							<p><?php the_excerpt(); ?></p>
 						</article>
 						<?php } else { ?>
 						

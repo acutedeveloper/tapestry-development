@@ -1063,7 +1063,7 @@ header .container form {
 }
 @media (min-width: 1024px) {
   .news-home .column {
-    width: 32.20339%;
+    width: 49.15254%;
     float: left;
     margin-right: 1.69492%;
   }
@@ -1125,7 +1125,7 @@ header .container form {
   margin-right: 0;
 }
 .news-home .column article h2 {
-  width: 49.15254%;
+  width: 74.57627%;
   float: right;
   margin-right: 0;
   font-size: 24px;
@@ -1133,14 +1133,7 @@ header .container form {
 }
 @media (min-width: 768px) {
   .news-home .column article h2 {
-    width: 48.27586%;
-    float: right;
-    margin-right: 0;
-  }
-}
-@media (min-width: 1024px) {
-  .news-home .column article h2 {
-    width: 47.36842%;
+    width: 65.51724%;
     float: right;
     margin-right: 0;
   }
@@ -1151,20 +1144,31 @@ header .container form {
 .news-home .column article h2 a:hover {
   text-decoration: underline;
 }
+.news-home .column article p {
+  width: 74.57627%;
+  float: right;
+  margin-right: 0;
+}
+@media (min-width: 768px) {
+  .news-home .column article p {
+    width: 65.51724%;
+    float: right;
+    margin-right: 0;
+  }
+}
 .news-home .column article .newsbox {
   padding: 10px;
   position: relative;
   margin-bottom: 1.69492%;
   overflow: hidden;
-  background-color: #A0A2A5;
   height: 168px;
-  width: 49.15254%;
+  width: 23.72881%;
   float: left;
   margin-right: 1.69492%;
 }
 @media (min-width: 768px) {
   .news-home .column article .newsbox {
-    width: 48.27586%;
+    width: 31.03448%;
     float: left;
     margin-right: 3.44828%;
   }
