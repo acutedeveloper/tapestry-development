@@ -979,6 +979,34 @@ header .container form {
   color: #FFFFFF;
   text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.5);
 }
+#leftcolumn ul li.menu-red.current_page_item > a {
+  color: #FFFFFF;
+  background-color: #DA322A;
+}
+#leftcolumn ul li.menu-purple.current_page_item > a {
+  color: #FFFFFF;
+  background-color: #582A69;
+}
+#leftcolumn ul li.menu-blue.current_page_item > a {
+  color: #FFFFFF;
+  background-color: #005C97;
+}
+#leftcolumn ul li.menu-magenta.current_page_item > a {
+  color: #FFFFFF;
+  background-color: #D8127D;
+}
+#leftcolumn ul li.menu-cyan.current_page_item > a {
+  color: #FFFFFF;
+  background-color: #00A3DA;
+}
+#leftcolumn ul li.menu-green.current_page_item > a {
+  color: #FFFFFF;
+  background-color: #009681;
+}
+#leftcolumn ul li.menu-yellow.current_page_item > a {
+  color: #FFFFFF;
+  background-color: #ED9D2D;
+}
 #leftcolumn .authorinfo {
   width: 100%;
   float: left;
@@ -1834,7 +1862,7 @@ nav#main-nav ul li a {
     padding: 0 10px 0 10px;
   }
 }
-nav#main-nav ul li a:hover {
+nav#main-nav ul li a:hover, nav#main-nav ul li a.mmhover {
   color: #FFFFFF;
   background-color: #DA322A;
 }
@@ -1845,9 +1873,54 @@ nav#main-nav ul li:first-child {
 nav#main-nav ul li:last-child {
   margin: 0;
 }
-nav#main-nav ul li.current-menu-parent > a {
+nav#main-nav ul li.menu-red.current-menu-parent > a {
   color: #FFFFFF;
   background-color: #DA322A;
+}
+nav#main-nav ul li.menu-purple.current-menu-parent > a {
+  color: #FFFFFF;
+  background-color: #582A69;
+}
+nav#main-nav ul li.menu-blue.current-menu-parent > a {
+  color: #FFFFFF;
+  background-color: #005C97;
+}
+nav#main-nav ul li.menu-magenta.current-menu-parent > a {
+  color: #FFFFFF;
+  background-color: #D8127D;
+}
+nav#main-nav ul li.menu-cyan.current-menu-parent > a {
+  color: #FFFFFF;
+  background-color: #00A3DA;
+}
+nav#main-nav ul li.menu-green.current-menu-parent > a {
+  color: #FFFFFF;
+  background-color: #009681;
+}
+nav#main-nav ul li.menu-yellow.current-menu-parent > a {
+  color: #FFFFFF;
+  background-color: #ED9D2D;
+}
+nav#main-nav ul li.menu-red a:hover, nav#main-nav ul li.menu-red a.mmhover {
+  background-color: #DA322A;
+}
+nav#main-nav ul li.menu-purple a:hover, nav#main-nav ul li.menu-purple a.mmhover {
+  background-color: #582A69;
+}
+nav#main-nav ul li.menu-blue a:hover, nav#main-nav ul li.menu-blue a.mmhover {
+  background-color: #005C97;
+}
+nav#main-nav ul li.menu-magenta a:hover, nav#main-nav ul li.menu-magenta a.mmhover {
+  background-color: #D8127D;
+}
+nav#main-nav ul li.menu-cyan a:hover, nav#main-nav ul li.menu-cyan a.mmhover {
+  background-color: #00A3DA;
+}
+nav#main-nav ul li.menu-green a:hover, nav#main-nav ul li.menu-green a.mmhover {
+  background-color: #009681;
+}
+nav#main-nav ul li.menu-yellow a:hover, nav#main-nav ul li.menu-yellow a.mmhover {
+  background-color: #ED9D2D;
 }
 nav#main-nav ul li:hover > ul {
   display: block;
@@ -1881,6 +1954,7 @@ nav#main-nav ul ul li a:hover {
     text-align: center;
   }
   nav#main-nav ul {
+    display: block;
     width: auto;
     margin: 0 auto;
     position: relative;
@@ -1936,7 +2010,7 @@ nav#main-nav ul ul li a:hover {
     -moz-background-clip: padding;
     background-clip: padding-box;
     position: absolute;
-    top: 100%;
+    top: 110%;
     padding: 0;
     display: none;
     width: auto;
@@ -1944,6 +2018,7 @@ nav#main-nav ul ul li a:hover {
   nav#main-nav ul ul li {
     float: none;
     position: relative;
+    margin: 0;
   }
   nav#main-nav ul ul li a {
     -webkit-border-radius: 0;
@@ -2463,6 +2538,27 @@ table.data tr:hover td {
 
 .silver {
   background-color: #ECECED;
+}
+
+.black {
+  background-color: #111;
+}
+
+.gradient {
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.01) 0%, black 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, black), color-stop(100%, rgba(0, 0, 0, 0.01)));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.01) 0%, black 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.01) 0%, black 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.01) 0%, black 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.01) 0%, #000000 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#66000000', endColorstr='#03000000',GradientType=0 );
+  /* IE6-8 */
 }
 
 .red {

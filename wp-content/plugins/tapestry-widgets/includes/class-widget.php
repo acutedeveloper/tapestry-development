@@ -227,9 +227,10 @@ class TAP_Widgets_Widget extends WP_Widget
 			<label for="<?php echo $this->get_field_id('color'); ?>"><?php _e('Color', 'wp_widget_plugin'); ?></label>
 			<select name="<?php echo $this->get_field_name('color'); ?>" id="<?php echo $this->get_field_id('color'); ?>" class="widefat">
 				<?php
-					$options = array('green', 'blue', 'red', 'purple', 'yellow', 'cyan', 'magenta');
-					foreach ($options as $option) {
-					echo '<option value="' . $option . '" id="' . $option . '"', $color == $option ? ' selected="selected"' : '', '>', $option, '</option>';
+					$options = array('none', 'gradient', 'green', 'blue', 'red', 'purple', 'yellow', 'cyan', 'magenta', 'black');
+					foreach ($options as $option)
+					{
+						echo '<option value="' . $option . '" id="' . $option . '"', $color == $option ? ' selected="selected"' : '', '>', $option, '</option>';
 					}
 				?>
 			</select>
