@@ -1318,6 +1318,10 @@ header .container form {
   font-weight: bold;
   color: #A0A2A5;
 }
+.latest-articles img {
+  float: right;
+  margin-left: 10px;
+}
 
 .featured-articles {
   width: 100%;
@@ -1344,14 +1348,22 @@ header .container form {
   font-weight: normal;
 }
 .featured-articles article {
-  width: 49.15254%;
+  width: 100%;
   float: left;
-  margin-right: 1.69492%;
+  margin-left: 0;
+  margin-right: 0;
   border-bottom: 1px solid #ECECED;
   padding-bottom: 1.69492%;
   margin-bottom: 12px;
   position: relative;
   border-bottom: none;
+}
+@media (min-width: 480px) {
+  .featured-articles article {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
 }
 .featured-articles article h2 {
   font-size: 24px;
@@ -1377,7 +1389,7 @@ header .container form {
   margin-left: 0;
   margin-right: 0;
   height: 225px;
-  margin-bottom: 1.69492%;
+  margin-bottom: 10px;
 }
 .featured-articles article .image-crop img {
   position: absolute;

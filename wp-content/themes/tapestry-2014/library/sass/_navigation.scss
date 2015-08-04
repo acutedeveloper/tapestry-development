@@ -1,7 +1,7 @@
 //------ MAIN NAVIGATION ------//
 
-	nav#main-nav {
-		border-top: 1px solid $light-grey;
+nav#main-nav {
+	border-top: 1px solid $light-grey;
 	
 	.to-main-nav{
 		text-decoration: none;
@@ -53,7 +53,7 @@
 				color: #757575;
 				text-decoration: none;
 				line-height: 40px;
-				&:hover{
+				&:hover, &.mmhover{
 					color: $white;
 					background-color: $red;
 				}
@@ -68,9 +68,75 @@
 				margin: 0;
 			}			
 
-			&.current-menu-parent > a{
+			&.menu-red.current-menu-parent > a{
 				color: $white;
 				background-color: $red;				
+			}
+
+			&.menu-purple.current-menu-parent > a{
+				color: $white;
+				background-color: $purple;				
+			}
+
+			&.menu-blue.current-menu-parent > a{
+				color: $white;
+				background-color: $blue;				
+			}
+
+			&.menu-magenta.current-menu-parent > a{
+				color: $white;
+				background-color: $magenta;				
+			}
+
+			&.menu-cyan.current-menu-parent > a{
+				color: $white;
+				background-color: $cyan;				
+			}
+
+			&.menu-green.current-menu-parent > a{
+				color: $white;
+				background-color: $green;				
+			}
+
+			&.menu-yellow.current-menu-parent > a{
+				color: $white;
+				background-color: $yellow;				
+			}
+			
+			&.menu-red a{
+				&:hover, &.mmhover{
+					background-color: $red;
+				}				
+			}
+			&.menu-purple a{
+				&:hover, &.mmhover{
+					background-color: $purple;
+				}				
+			}
+			&.menu-blue a{
+				&:hover, &.mmhover{
+					background-color: $blue;
+				}				
+			}
+			&.menu-magenta a{
+				&:hover, &.mmhover{
+					background-color: $magenta;
+				}				
+			}
+			&.menu-cyan a{
+				&:hover, &.mmhover{
+					background-color: $cyan;
+				}				
+			}
+			&.menu-green a{
+				&:hover, &.mmhover{
+					background-color: $green;
+				}				
+			}
+			&.menu-yellow a{
+				&:hover, &.mmhover{
+					background-color: $yellow;
+				}				
 			}
 		}
 		
@@ -117,6 +183,7 @@ nav#main-nav{
 	text-align: center;
 
 	ul{
+		display: block;
 		width: auto;
 		margin: 0 auto;
 		position: relative;
@@ -156,7 +223,7 @@ nav#main-nav{
 		ul{
 			@include border-radius($br);
 			position: absolute;
-			top: 100%;
+			top: 110%;
 			padding: 0;
 			display: none;
 			width: auto;
@@ -165,6 +232,7 @@ nav#main-nav{
 
 				float: none;
 				position: relative;
+				margin: 0;
 				
 				a{
 					@include border-radius(0);

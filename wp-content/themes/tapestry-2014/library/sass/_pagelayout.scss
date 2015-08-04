@@ -189,7 +189,7 @@ header .container{
 	padding: 10px;
 	position: relative;
 	margin-bottom: gutter();
-  overflow: hidden;
+	overflow: hidden;
 	background-color: $light-grey;
 
 	h1{
@@ -539,6 +539,41 @@ header .container{
 				color: $white;
 				text-shadow: 1px 1px 0px rgba(0,0,0,0.50);
 			}
+			
+			&.menu-red.current_page_item > a{
+				color: $white;
+				background-color: $red;				
+			}
+
+			&.menu-purple.current_page_item > a{
+				color: $white;
+				background-color: $purple;				
+			}
+
+			&.menu-blue.current_page_item > a{
+				color: $white;
+				background-color: $blue;				
+			}
+
+			&.menu-magenta.current_page_item > a{
+				color: $white;
+				background-color: $magenta;				
+			}
+
+			&.menu-cyan.current_page_item > a{
+				color: $white;
+				background-color: $cyan;				
+			}
+
+			&.menu-green.current_page_item > a{
+				color: $white;
+				background-color: $green;				
+			}
+
+			&.menu-yellow.current_page_item > a{
+				color: $white;
+				background-color: $yellow;				
+			}
 
 		}
 	}
@@ -588,7 +623,7 @@ header .container{
 	.column{
 		@include span(12);
 		@include breakpoint(1024px){
-			@include span(4 of 12);
+			@include span(6 of 12);
 		}
 		@include clearfix;
 		margin-bottom: gutter();
@@ -619,13 +654,11 @@ header .container{
 			}
 
 			h2{
-				@include span(6 of 12 last);
+				@include span(9 of 12 last);
 				@include breakpoint(768px){
-					@include span(3 of 6 last);
+					@include span(4 of 6 last);
 				}
-				@include breakpoint(1024px){
-					@include span(2 of 4 last);
-				}
+
 				font-size: 24px;
 				line-height: 30px;
 				a{
@@ -635,17 +668,23 @@ header .container{
 					}
 				}
 			}
+			
+			p{
+				@include span(9 of 12 last);
+				@include breakpoint(768px){
+					@include span(4 of 6 last);
+				}
+			}
 
 			.newsbox{
 				padding: 10px;
 				position: relative;
 				margin-bottom: gutter();
 			    overflow: hidden;
-				background-color: $light-grey;
 				height: 168px;
-				@include span(6 of 12);
+				@include span(3 of 12);
 				@include breakpoint(768px){
-					@include span(3 of 6);
+					@include span(2 of 6);
 				}
 
 				a.label{
@@ -759,6 +798,11 @@ header .container{
 		@include articlestyle();
 
 	}
+	
+	img{
+		float: right;
+		margin-left: 10px;
+	}
 
 }
 
@@ -774,7 +818,12 @@ header .container{
 
 	article{
 
-		@include span(6 of 12);
+		@include span(12 of 12);
+		
+		@include breakpoint(480px){
+			@include span(6 of 12);
+		}
+			
 		@include articlestyle();
 		border-bottom: none;
 
@@ -788,7 +837,7 @@ header .container{
 			position: relative;
 			@include span(12);
 			height: 225px;
-			margin-bottom: gutter();
+			margin-bottom: 10px;
 
 			img{
 				position: absolute;

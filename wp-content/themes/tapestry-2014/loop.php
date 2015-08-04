@@ -29,6 +29,7 @@
         <article class="article-archive <?php echo $firstClass; ?>" id="post-<?php the_ID(); ?>">
 			<?php $firstClass = ""; ?>
 			<?php ?>
+	            <?php the_post_thumbnail('news-home'); ?>
                 <h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( '%s' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark">
                 	<?php the_title(); ?></a></h2>
 
