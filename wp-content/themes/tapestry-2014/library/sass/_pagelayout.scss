@@ -1086,35 +1086,54 @@ footer{
 
 .footer-nav{
 
-	@include span(12);
+	width: 100%;
+	float: left;
+		
 	ul{
-		margin: 0;
-		padding: 0;
-		list-style: none;
-		float: left;
 		background-color: $red;
+		float: left;
 		@include border-radius-top($br);
+		width: 100%;
 
 		li{
-			display: inline;
-			border: none;
 			color: $white;
-			margin: 0;
-			padding: 0;
-
+			
 			a{
-				padding: 5px 10px 5px 10px;
-				margin: 0;
+				padding: 0;
+				padding-bottom: 2px;
+				border-bottom: 1px solid $white;
+				margin: 5px 10px 5px 10px;
 				color: $white;
 				font-size: 14px;
 				font-weight: bold;
 				text-decoration: none;
-				@include border-radius($br);
+				display: block;
+
 				&:hover{
 					text-decoration: underline;
 				}
 			}
-		}
+			
+			&:last-child a{
+				border-bottom: none;
+			}
+		}		
+
+		// Tablet & up
+		@include breakpoint(768px){
+			width: auto;
+			
+			li{
+				display: inline;
+				
+				a{
+					margin-bottom: 10px;
+					display: inline;
+					border-bottom: none;
+				}
+			}
+			
+		}	
 
 	}
 
