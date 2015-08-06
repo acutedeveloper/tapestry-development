@@ -24,7 +24,7 @@
 <div class="latest-articles">
 
 <?php while ( have_posts() ) : the_post(); ?>
-	<?php /* How to display standard posts and search results */ ?>
+	<?php /* How to display standard posts and search results */  ?>
 
         <article class="article-archive <?php echo $firstClass; ?>" id="post-<?php the_ID(); ?>">
 			<?php $firstClass = ""; ?>
@@ -34,8 +34,14 @@
                 	<?php the_title(); ?></a></h2>
 
                 <p><?php the_excerpt(); ?></p>
+
 				<?php category_label(get_the_ID()); ?>
-				<p class="date"><?php the_time('l, F jS, Y') ?></p>
+
+				<?php if(get_post_type( get_the_ID() ) == 'tribe_events'): ?>
+					<p class="date"><?php echo "Event date: " . tribe_get_start_date(get_the_ID()); ?></p>
+				<?php else: ?>
+					<p class="date"><?php the_time('l, F jS, Y') ?></p>
+				<?php endif; ?>
 		</article>
 
 		<?php comments_template( '', true ); ?>

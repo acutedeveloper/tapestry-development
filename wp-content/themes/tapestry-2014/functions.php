@@ -220,6 +220,9 @@ function category_label($id){
 	    case "post":
 	        $parent_cat_id = 24;
 	        break;
+	    case "tribe_events":
+	    	$parent_cat_id = 47;
+	    	break;
 	}
 		
 	$cat_children = explode("/", get_category_children($parent_cat_id));
@@ -236,6 +239,49 @@ function category_label($id){
 		}
 	}
 			
+}
+
+//------ RELEVANSSI SEARCH FILTERS ------//
+
+add_filter('relevanssi_hits_filter', 'future_events');
+
+
+/*
+	TRIBE RELEVANSSI FILTER
+	
+	This is to allow the relevanssi search plugin to only show
+	future events from the Tribe events plugin.
+	
+*/
+
+function future_events($hits)
+{		
+    $types = array();
+ 
+    $types['page'] = array();
+    $types['post'] = array();
+    $types['tribe_events'] = array();
+ 
+    // Split the post types in array $types
+    if (!empty($hits)) {
+        foreach ($hits[0] as $post)
+        {
+			if($post->post_type == 'tribe_events' && date('Y-m-d H:i:s') < tribe_get_event_meta( $post->ID, '_EventStartDate', true ))
+			{
+				array_push($types[$post->post_type], $post);
+			}
+			else if($post->post_type == 'post' || $post->post_type == 'page')
+			{
+				array_push($types[$post->post_type], $post);
+			}
+			
+        }
+    }
+ 
+    // Merge back to $hits in the desired order
+    $hits[0] = array_merge($types['page'], $types['tribe_events'], $types['page']);
+
+	return $hits;
 }
 
 //------ FLICKR FEED -------//
