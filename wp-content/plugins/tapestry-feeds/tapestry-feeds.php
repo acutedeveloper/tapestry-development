@@ -98,12 +98,12 @@ function tap_facebook_feed(){
 		    {
 		            // check if post type is a status
 		            if ($post['type'] == 'status') {
-		                $html .= "<p>" . myTruncate($post['message'], 100) . "</p>";
+		                $html .= "<p>" . myTruncate($post['message'], 75) . "</p>";
 		            }
 
 		            // check if post type is a link
 		            if ($post['type'] == 'link') {
-		                $html .= "<p>" . myTruncate($post['message'], 100) . " ";
+		                $html .= "<p>" . myTruncate($post['message'], 75) . " ";
 		                $html .= "<a href=\"" . $post['link'] . "\" target=\"_blank\">" . "Read More" . "</a></p>";
 		            }
 
@@ -112,7 +112,7 @@ function tap_facebook_feed(){
 		                if (empty($post['story']) === false) {
 		                    $html .= "<p>" . $post['story'] . " ";
 		                } elseif (empty($post['message']) === false) {
-		                    $html .= "<p>" . myTruncate($post['message'], 100) . " ";
+		                    $html .= "<p>" . myTruncate($post['message'], 75) . " ";
 		                }
 		                $html .= "<a href=\"" . $post['link'] . "\" target=\"_blank\">View photo &rarr;</a></p>";
 		            }
