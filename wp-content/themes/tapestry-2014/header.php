@@ -63,7 +63,7 @@
 					</ul>
 -->
 					<?php wp_nav_menu( array( 'theme_location'  => 'header_menu', ) ); ?>
-					<p>Formerly Age Concern Havering</p>
+<!-- 					<p>Formerly Age Concern Havering</p> -->
 				</nav>
 				
 				<form action="<?php echo site_url(); ?>" method="get" accept-charset="utf-8">
