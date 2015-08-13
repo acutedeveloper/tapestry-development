@@ -47,9 +47,11 @@
 		<header>
 			<div class="container">
 
+<!--
 				<div class="mini-tab">
 					<p>Formerly Age Concern Havering</p>
 				</div>
+-->
 
 				<div class="logo">
 					<a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('template_url'); ?>/library/img/logo-tapestry.png" alt="logo-tapestry" width="169" height="92" /></a>

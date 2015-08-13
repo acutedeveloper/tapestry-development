@@ -203,8 +203,7 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 //------ PAGE META BOXES ------//
 
 add_action( 'admin_init', 'page_meta_boxes' );
-function page_meta_boxes(){
-	 
+function page_meta_boxes(){	 
 	// Add category metabox to page 
 	register_taxonomy_for_object_type('category', 'page');  	
 }
