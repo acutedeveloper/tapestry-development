@@ -20,7 +20,7 @@
 					<hr/>
 					<p>Share links</p>
 					<a class="label label-tw" href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&amp;text=<?php the_title(); ?>&amp;via=tapestrycare" target="_blank">Tweet this</a>
-				<a class="label label-fb" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank">Share this</a>	
+					<a class="label label-fb" href="https://www.facebook.com/sharer/sharer.php?u=<?php the_permalink(); ?>" target="_blank">Share this</a>	
 				</div>
 			<?php endwhile; else: ?>
 			<?php endif; ?>
@@ -34,7 +34,6 @@
 				
 			  	<?php the_content(); ?>
 	
-			</article>
 			<?php endwhile; else: ?>
 			<?php endif; ?>
 

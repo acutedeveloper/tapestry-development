@@ -300,7 +300,9 @@ header .container {
       -moz-border-radius-bottomright: 5px;
       -webkit-border-bottom-right-radius: 5px;
       border-bottom-right-radius: 5px;
-      width: 240px; }
+      width: 185px; }
+      header .container .mini-tab p a {
+        color: #FFFFFF; }
   header .container .mini-navs {
     padding-left: 33.89831%;
     padding-right: 20px;
@@ -325,6 +327,8 @@ header .container {
       -moz-border-radius-bottomright: 5px;
       -webkit-border-bottom-right-radius: 5px;
       border-bottom-right-radius: 5px; }
+      header .container .mini-navs p a {
+        color: #FFFFFF; }
     header .container .mini-navs ul {
       margin: 0;
       padding: 0;

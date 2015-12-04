@@ -32,7 +32,11 @@ header .container{
 			display: block;
 			background-color: $light-grey;
 			@include border-radius-bottom($br);
-			width: 240px;
+			width: 185px;
+
+			a{
+				color: $white;
+			}
 
 		}
 
@@ -59,6 +63,10 @@ header .container{
 			display: block;
 			background-color: $light-grey;
 			@include border-radius-bottom($br);
+
+			a{
+				color: $white;
+			}
 		}
 
 		ul{

@@ -47,17 +47,14 @@
 		<header>
 			<div class="container">
 
-<!--
 				<div class="mini-tab">
-					<p>Formerly Age Concern Havering</p>
+					<p><a href="http://www.tapestry-uk.org/email-signup/">Sign up to our E-Bulletin</a></p>
 				</div>
--->
 
 				<div class="logo">
 					<a href="<?php echo get_option('home'); ?>"><img src="<?php bloginfo('template_url'); ?>/library/img/logo-tapestry.png" alt="logo-tapestry" width="169" height="92" /></a>
 				</div>
 
-				
 				<nav class="mini-navs">
 <!--
 					<ul>
@@ -65,7 +62,7 @@
 					</ul>
 -->
 					<?php wp_nav_menu( array( 'theme_location'  => 'header_menu', ) ); ?>
-<!-- 					<p>Formerly Age Concern Havering</p> -->
+					<p><a href="http://www.tapestry-uk.org/email-signup/">Sign up to our E-Bulletin</a></p>
 				</nav>
 				
 				<form action="<?php echo site_url(); ?>" method="get" accept-charset="utf-8">
@@ -83,7 +80,6 @@
 				<a class="to-main-nav" href="#main-nav">Menu <i class="fa fa-bars"></i></a>
 				<ul class="main-nav">
 				<?php wp_nav_menu( array( 'theme_location'  => 'main_menu', 'menu_class' => 'main-nav', 'container' => '', 'items_wrap' => '%3$s', ) ); ?>
-				<?php wp_nav_menu( array( 'theme_location'  => 'header_menu', 'menu_class' => 'main-nav', 'container' => '', 'items_wrap' => '%3$s', ) ); ?>
 				</ul>
 			</div>
 		</nav>
